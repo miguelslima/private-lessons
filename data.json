@@ -1,0 +1,36 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://www.google.com",
+      "name": "Miguel Lima",
+      "birth": 533520000000,
+      "tipoaula": "presencial",
+      "created_at": 1583289164539
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://www.google.com",
+      "name": "Miguel Lima",
+      "birth": 533520000000,
+      "tipoaula": "presencial",
+      "created_at": 1583289167947
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://www.google.com",
+      "name": "Miguel Lima",
+      "birth": 7983100800000,
+      "tipoaula": "presencial",
+      "created_at": 1583289240966
+    },
+    {
+      "id": 4,
+      "avatar_url": "http://www.google.com",
+      "name": "Miguel Lima",
+      "birth": 7959168000000,
+      "tipoaula": "presencial",
+      "created_at": 1583289650756
+    }
+  ]
+}
