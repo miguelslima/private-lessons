@@ -1,26 +1,6 @@
 {
   "teachers": [
     {
-      "id": "1",
-      "avatar_url": "http://www.google.com",
-      "name": "Miguel Limaa1",
-      "birth": 1012780800000,
-      "select": "mestrado",
-      "tipoaula": "presencial",
-      "services": "crossfit, academia, yoga",
-      "created_at": 1583374782086
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://www.google.com",
-      "name": "Miguel Lima",
-      "birth": 7952342400000,
-      "select": "ensinosuperior",
-      "tipoaula": "distancia",
-      "services": "crossfit, academia, yoga",
-      "created_at": 1583374804188
-    },
-    {
       "id": 3,
       "avatar_url": "http://www.google.com",
       "name": "Miguel Lima",

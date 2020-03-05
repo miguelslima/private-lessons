@@ -210,3 +210,8 @@ fieldset select{
     background-color: var(--primary-color);
     color: white;
 }
+
+#form-delete button[type="submit"] {
+    margin-top: 8px;
+    background-color: red;
+}

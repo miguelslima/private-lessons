@@ -2,20 +2,32 @@
 
 {% block content %}
 
+<div class="card">
 
-<form class="card" method="POST" action="/teachers?_method=PUT">
-  <section class="avatar" style="background: url(https://source.unsplash.com/collection/517198/500x500) no-repeat center center / cover"></section>
-  <section class="details">
+    <section 
+      class="avatar" 
+      style="background: url(https://source.unsplash.com/collection/517198/500x500) no-repeat center center / cover">
+    </section>
 
-    <h3> Editar Professor </h3>
+    <section class="details">
+
+    <form  method="POST" action="/teachers?_method=PUT">
   
-    {% include 'teachers/fields.njk' %}
+      <h3> Editar Professor </h3>
+    
+      {% include 'teachers/fields.njk' %}
 
-    <input type="hidden" name="id" value={{teacher.id}}>
-  
+      <input type="hidden" name="id" value={{teacher.id}}>
+    
+    </form>
+
+    <form id="form-delete" action="/teachers?_method=DELETE" method="POST">
+      <input type="hidden" name="id" value="{{teacher.id}}">
+      <button type="submit"> Excluir </button>
+    </form>
+
   </section>
-</form>
-
+</div> 
 
 {% endblock content %}
 
