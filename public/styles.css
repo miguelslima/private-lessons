@@ -185,7 +185,8 @@ input::placeholder {
     font-weight: normal;
 }
 
-button[type="submit"] {
+button[type="submit"],
+a.button {
     padding: 8px 24px;
     background-color: var(--primary-color);
     color: white;
@@ -193,6 +194,13 @@ button[type="submit"] {
     margin-top: 32px;
     width: 100%;
     font-size: 16px;
+}
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
 }
 
 fieldset select{

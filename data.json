@@ -4,33 +4,51 @@
       "id": 1,
       "avatar_url": "http://www.google.com",
       "name": "Miguel Lima",
-      "birth": 533520000000,
+      "birth": 952128000000,
+      "select": "ensinomedio",
       "tipoaula": "presencial",
-      "created_at": 1583289164539
+      "services": "crossfit, academia, yoga",
+      "created_at": 1583374782086
     },
     {
       "id": 2,
       "avatar_url": "http://www.google.com",
       "name": "Miguel Lima",
-      "birth": 533520000000,
-      "tipoaula": "presencial",
-      "created_at": 1583289167947
+      "birth": 7952342400000,
+      "select": "ensinosuperior",
+      "tipoaula": "distancia",
+      "services": "crossfit, academia, yoga",
+      "created_at": 1583374804188
     },
     {
       "id": 3,
       "avatar_url": "http://www.google.com",
       "name": "Miguel Lima",
-      "birth": 7983100800000,
+      "birth": 7952342400000,
+      "select": "mestrado",
       "tipoaula": "presencial",
-      "created_at": 1583289240966
+      "services": "crossfit, academia, yoga",
+      "created_at": 1583374812283
     },
     {
       "id": 4,
       "avatar_url": "http://www.google.com",
       "name": "Miguel Lima",
-      "birth": 7959168000000,
+      "birth": 7952342400000,
+      "select": "doutorado",
+      "tipoaula": "distancia",
+      "services": "crossfit, academia, yoga",
+      "created_at": 1583374819647
+    },
+    {
+      "id": 5,
+      "avatar_url": "http://www.google.com",
+      "name": "Miguel Lima",
+      "birth": 952128000000,
+      "select": "mestrado",
       "tipoaula": "presencial",
-      "created_at": 1583289650756
+      "services": "crossfit",
+      "created_at": 1583376090879
     }
   ]
 }
