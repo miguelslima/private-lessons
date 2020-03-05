@@ -1,20 +1,34 @@
 <div class="item">
   <div>Avatar</div>
   <div>
-    <input type="url" name="avatar_url" placeholder="http://">
+    <input 
+      type="url" 
+      name="avatar_url" 
+      placeholder="http://"
+      value="{{teacher.avatar_url}}"
+      >
   </div>
 </div>
 <div class="item">
   <div>Nome completo</div>
   <div>
-    <input type="text" name="name" placeholde="Nome do professor(a)">
+    <input 
+      type="text" 
+      name="name" 
+      placeholde="Nome do professor(a)"
+      value="{{teacher.name}}"
+    >
   </div>
 </div>
 
 <div class="item">
   <div>Data de nascimento</div>
   <div>
-    <input type="date" name="birth">
+    <input 
+      type="date" 
+      name="birth"
+      value="{{teacher.birth}}"
+    >
   </div>
 </div>
 
@@ -35,15 +49,30 @@
 <div class="item">
   <div>Tipo de Aula</div>
   <div>
-    <span><input type="radio" name="tipoaula" value="presencial" checked> Presencial</span>
-    <span><input type="radio" name="tipoaula" value="distancia"> À Distância</span>   
+    <span>
+      <input 
+        type="radio" 
+        name="tipoaula" 
+        value="presencial" {% if teacher.tipoaula == 'presencial' %}
+        {% endif %} checked> Presencial</span>
+    <span>
+      <input 
+        type="radio" 
+        name="tipoaula" 
+        value="distancia" {% if teacher.tipoaula == 'distancia' %}
+        {% endif %}> À Distância</span>   
   </div>
 </div>
 
 <div class="item">
   <div>Área de atuação</div>
   <div>
-    <input type="text" name="services" placeholder="Separe as matérias por vírgula">    
+    <input 
+      type="text" 
+      name="services" 
+      placeholder="Separe as matérias por vírgula"
+      value="{{teacher.services}}"
+    >    
   </div>
 </div>
 
