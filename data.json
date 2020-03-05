@@ -1,11 +1,11 @@
 {
   "teachers": [
     {
-      "id": 1,
+      "id": "1",
       "avatar_url": "http://www.google.com",
-      "name": "Miguel Lima",
-      "birth": 952128000000,
-      "select": "ensinomedio",
+      "name": "Miguel Limaa1",
+      "birth": 1012780800000,
+      "select": "mestrado",
       "tipoaula": "presencial",
       "services": "crossfit, academia, yoga",
       "created_at": 1583374782086
