@@ -3,44 +3,30 @@
 {% block content %}
 
 
-<div class="card">
-  <section class="avatar" style="background: url(https://source.unsplash.com/collection/517198/500x500) no-repeat center center / cover"></section>
-  <section class="details">
-    <h3> Detalhes </h3>
-    <div class="item">
-      <div>Teacher</div>
-      <div>Magda Fabiana</div>
-    </div>
-
-    <div class="item">
-      <div>Idade</div>
-      <div>35</div>
-    </div>
-
-    <div class="item">
-      <div>Sexo</div>
-      <div>Feminino</div>
-    </div>
-    
-    <div class="item">
-      <div>Grau de Escolaridade</div>
-      <div>Mestrado</div>
-    </div>
-
-    <div class="item">
-      <div>Acompanhemento</div>
-      <div>
-        <span>Enfermaria</span>
-        <span>Materno-infantil</span>
-      </div>
-    </div>
-
-    <div class="item">
-      <div>Desde</div>
-      <div>01/01/2019</div>
-    </div>
-
-  </section>
+<div class="card table-container">
+  <table width="100%">
+    <thead>
+      <tr>
+        <th>Professor</th>
+        <th>Grau</th>
+        <th>Matérias</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for teacher in teachers %}
+      <tr>
+        <td>
+        <span style="background-image: url({{teacher.avatar_url}})"></span>
+          {{teacher.name}}
+        </td>
+        <td>{{teacher.select}}</td>
+        <td>{{teacher.services}}</td>
+        <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
 
 
