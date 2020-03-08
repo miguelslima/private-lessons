@@ -76,6 +76,10 @@ header {
     transition: width 300ms ease-in-out;
 }
 
+.item .avatar {
+    font-size: 10px;
+}
+
 /* CARD  */
 
 .card {
@@ -288,4 +292,3 @@ tbody tr td:last-child a {
 td:last-child {
     text-align: center;
 }
-

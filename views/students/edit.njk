@@ -25,20 +25,10 @@
       <input type="hidden" name="id" value="{{student.id}}">
       <button type="submit"> Excluir </button>
     </form>
-    
-    <script>
-      const formDelete = document.querySelector("#form-delete");
-      formDelete.addEventListener("submit", function(event){
-        const confirmation = confirm("Deseja deletar?");
-        if(!confirmation) {
-          event.preventDefault()
-        }
-      })
-    </script>
 
   </section>
 </div> 
-
+{% include 'confirm.njk' %}
 {% endblock content %}
 
 
