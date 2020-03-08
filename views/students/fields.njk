@@ -5,10 +5,11 @@
       type="url" 
       name="avatar_url" 
       placeholder="http://"
-      value="{{studant.avatar_url}}"
+      value="{{student.avatar_url}}"
       >
   </div>
 </div>
+
 <div class="item">
   <div>Nome completo</div>
   <div>
@@ -16,64 +17,59 @@
       type="text" 
       name="name" 
       placeholde="Nome do Aluno(a)"
-      value="{{studant.name}}"
+      value="{{student.name}}"
     >
   </div>
 </div>
 
 <div class="item">
-  <div>Data de nascimento</div>
+  <div>Email</div>
   <div>
     <input 
-      type="date" 
+      type="email" 
+      name="email" 
+      placeholde="Email do Aluno(a)"
+      value="{{student.email}}"
+    >
+  </div>
+</div>
+
+<div class="item">
+  <div>Aniversário</div>
+  <div>
+    <input
+      type="date"
       name="birth"
-      value="{{studant.birth}}"
+      value="{{student.birth}}"
     >
   </div>
 </div>
 
-<fieldset>
-  <div class="item">
-    <div>Grau de Escolaridade</div>
-    <div>
-      <select name="select">
-        <option value="ensinomedio">Ensino Médio Completo</option>
-        <option value="ensinosuperior" selected>Ensino Superior Completo</option>
-        <option value="mestrado">Mestrado</option>
-        <option value="doutorado">Doutorado</option>
-      </select>
-    </div>
-  </div>
-</fieldset>
-
 <div class="item">
-  <div>Tipo de Aula</div>
-  <div>
-    <span>
-      <input 
-        type="radio" 
-        name="tipoaula" 
-        value="presencial" {% if studant.tipoaula == 'presencial' %}
-        {% endif %} checked> Presencial</span>
-    <span>
-      <input 
-        type="radio" 
-        name="tipoaula" 
-        value="distancia" {% if studant.tipoaula == 'distancia' %}
-        {% endif %}> À Distância</span>   
-  </div>
+  <div>Ano Escolar</div>
+   <select name="yearSchool">
+    <option value="5.ano" {% if student.yearSchool == "5.ano" %} selected {% endif %}>5º Ano Ensino Fundamental</option>
+    <option value="6.ano"{% if student.yearSchool == "6.ano" %} selected {% endif %}>6º Ano Ensino Fundamental</option>
+    <option value="7.ano"{% if student.yearSchool == "7.ano" %} selected {% endif %}>7º Ano Ensino Fundamental</option>
+    <option value="8.ano"{% if student.yearSchool == "8.ano" %} selected {% endif %}>8º Ano Ensino Fundamental</option>
+    <option value="9.ano"{% if student.yearSchool == "9.ano" %} selected {% endif %}>9º Ano Ensino Fundamental</option>
+    <option value="1.medio"{% if student.yearSchool == "1.medio" %} selected {% endif %}>1º Ano Ensino Médio</option>
+    <option value="2.medio"{% if student.yearSchool == "2.medio" %} selected {% endif %}>2º Ano Ensino Médio</option>
+    <option value="3.medio"{% if student.yearSchool == "3.medio" %} selected {% endif %}>3º Ano Ensino Médio</option>
+  </select>
 </div>
 
 <div class="item">
-  <div>Área de atuação</div>
+  <div>Carga horária semanal</div>
   <div>
     <input 
-      type="text" 
-      name="services" 
-      placeholder="Separe as matérias por vírgula"
-      value="{{studant.services}}"
-    >    
+      type="number" 
+      name="workload" 
+      placeholde=""
+      value="{{student.workload}}"
+    >
   </div>
 </div>
+
 
 <button type="submit">Salvar</button>

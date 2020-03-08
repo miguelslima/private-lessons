@@ -1,6 +1,6 @@
 const fs = require("fs");
 const data = require('../data.json');
-const { age, date, graduation, tipoaula} = require('../utils');
+const { age, date, yearSchool} = require('../utils');
 
 exports.index = function(req, res) {
 
@@ -21,22 +21,27 @@ exports.post = function(req, res) {
     return res.send("Please, fill all fields");
   }
 
-  let { id, avatar_url, select, name, birth, tipoaula, services } = req.body;
+  let { 
+    id, 
+    avatar_url, 
+    name, 
+    email,
+    birth, 
+    select,  
+    workload, 
+  } = req.body;
 
   birth = Date.parse(birth);
-  const created_at = Date.now();
   id = Number(data.students.length + 1);
 
-
   data.students.push({
-    id,
-    avatar_url,
-    name,
-    birth,
-    select,
-    tipoaula,
-    services,
-    created_at
+    id, 
+    avatar_url, 
+    name, 
+    email,
+    birth, 
+    select, 
+    workload
   });
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
@@ -58,16 +63,13 @@ exports.show = function(req, res) {
   });
 
   if(!foundStudent) {
-    return res.send('student not found!');
+    return res.send('Student not found!');
   }
 
   const student = {
     ...foundStudent,
     age: age(foundStudent.birth),
-    services: foundStudent.services.split(","),
-    created_at: new Intl.DateTimeFormat('en-GB').format(foundStudent.created_at), 
-    graduation: graduation(foundStudent.select),
-    tipoaula: tipoaula(foundStudent.tipoaula)
+    yearSchool: yearSchool(foundStudent.yearSchool)
   }
 
   return res.render("students/show", { student });
@@ -81,12 +83,13 @@ exports.edit = function(req, res) {
   })
 
   if(!foundStudent) {
-    return res.send('student not found!');
+    return res.send('Student not found!');
   }
 
   const student = {
     ...foundStudent,
-    birth: date(foundStudent  .birth)
+    birth: date(foundStudent.birth),
+    yearSchool: yearSchool(foundStudent.select)
   }
   
   return res.render('students/edit', { student });

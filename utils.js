@@ -43,5 +43,38 @@ module.exports = {
       return "Presencial";
     }
     return "À distancia"
+  },
+  yearSchool: function(select) {
+    if (select == "5.ano"){
+      return "5º Ano Ensino Fundamental";
+    }else if
+
+      (select == "6.ano"){
+        return "6º Ano Ensino Fundamental";
+    }else if
+
+      (select == "7.ano"){
+        return "7º Ano Ensino Fundamental";
+    }else if
+
+      (select == "8.ano"){
+        return "8º Ano Ensino Fundamental";
+    }else if
+
+      (select == "9.ano"){
+        return "9º Ano Ensino Fundamental";
+    }else if
+
+      (select == "1.medio"){
+        return "1º Ano Ensino Médio";
+    }else if
+
+      (select == "2.medio"){
+        return "2º Ano Ensino Médio";
+    }else if
+
+    (select == "3.medio"){
+      return "3º Ano Ensino Médio";
+  }
   }
 }

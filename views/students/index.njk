@@ -2,27 +2,27 @@
 
 {% block content %}
 
-
 <div class="card table-container">
+  <a href="/students/create" class="button">Novo</a>
   <table width="100%">
     <thead>
       <tr>
-        <th>Professor</th>
-        <th>Grau</th>
-        <th>Matérias</th>
+        <th>Aluno</th>
+        <th>Email</th>
+        <th>Ano Escolar</th>
         <th>Ação</th>
       </tr>
     </thead>
     <tbody>
-      {% for teacher in teachers %}
+      {% for student in students %}
       <tr>
         <td>
-        <span style="background-image: url({{teacher.avatar_url}})"></span>
-          {{teacher.name}}
+        <span style="background-image: url({{student.avatar_url}})"></span>
+          {{student.name}}
         </td>
-        <td>{{teacher.select}}</td>
-        <td>{{teacher.services}}</td>
-        <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
+        <td>{{student.email}}</td>
+        <td>{{student.yearSchool}}</td>
+        <td><a href="/students/{{student.id}}">Ver</a></td>
       </tr>
       {% endfor %}
     </tbody>

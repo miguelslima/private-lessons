@@ -1,5 +1,15 @@
 {
-  "students": [],
+  "students": [
+    {
+      "id": "1",
+      "avatar_url": "http://www.google.com",
+      "name": "Miguel Lima",
+      "birth": 1012608000000,
+      "yearSchool": "8.ano",
+      "workload": "25",
+      "email": "miguelsousalima@hotmail.com"
+    }
+  ],
   "teachers": [
     {
       "id": 1,
